@@ -30,8 +30,10 @@ public class Enemy : MonoBehaviour
         Debug.Log("Enemy Died");
         // Die Animation
 
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
+        //GetComponent<Collider2D>().enabled = false;
+        //this.enabled = false;
+
+        Destroy(gameObject);
        
     }
 }
