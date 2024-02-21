@@ -6,6 +6,8 @@ public class PlayerHealthManager : MonoBehaviour
 {
 
     public float playerHealth = 100;
+    private float damageTaken;
+    
     // Start is called before the first frame update
     void Start()
     {
