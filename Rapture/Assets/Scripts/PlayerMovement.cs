@@ -21,21 +21,11 @@ public class PlayerMovement : MonoBehaviour
     // Animation Reqs
     public Animator animator;
 
-    // Combat Reqs
-    public GameObject attackPoint;
-    public float radius;
-    public LayerMask enemies;
-    public int attackDamage = 40;
-    private bool canAttack;
-    
-
-    // Player Health reqs
-    public int playerHealth = 100;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        canAttack = true;
+        Debug.Log("Hello");
     }
 
     // Update is called once per frame
@@ -58,8 +48,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
-
-
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -91,40 +79,5 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
-    }
-
-    IEnumerator AttackDelay()
-    {
-        yield return new WaitForSeconds(.4f);
-        animator.SetBool("isAttacking", false);
-        canAttack = true;
-        
-    }
-    public void Attack(InputAction.CallbackContext context)
-    {
-        // Get Keycode performance
-        if(context.performed && canAttack)
-        {
-
-        // Attack animation
-        animator.SetBool("isAttacking", true);
-
-        // Detects Enemies in range
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.transform.position, radius, enemies);
-
-        // Damages Enemy
-        foreach (Collider2D enemy in hitEnemies)
-        {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-            Debug.Log("Hit enemy");
-        }
-        }
-        StartCoroutine(AttackDelay());     
-
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(attackPoint.transform.position, radius);
     }
 }

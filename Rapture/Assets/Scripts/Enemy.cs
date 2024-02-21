@@ -7,17 +7,13 @@ public class Enemy : MonoBehaviour
 
     public int maxHealth = 100;
     int currentHealth;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;    
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
 
     public void TakeDamage(int damage)
     {
@@ -32,5 +28,10 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy Died");
+        // Die Animation
+
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
+       
     }
 }
