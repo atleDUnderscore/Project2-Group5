@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 6f;
     private float jumpingPower = 8f;
     private bool isFacingRight = true;
+    [SerializeField] bool playerAlive;
 
     // Animation Reqs
     public Animator animator;
@@ -31,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        PlayerMover();
 
         // Set animator to enable running when horizontal axis input is detected
         if(horizontal > 0 || horizontal < 0)
@@ -40,11 +41,11 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isRunning", false);
 
 
-        if(!isFacingRight && horizontal > 0f)
+        if(!isFacingRight && horizontal > 0f && playerAlive)
         {
             Flip();
         }
-        else if(isFacingRight && horizontal < 0f)
+        else if(isFacingRight && horizontal < 0f && playerAlive)
         {
             Flip();
         }
@@ -79,5 +80,14 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
+    }
+
+    public void PlayerMover()
+    {
+        playerAlive = this.GetComponent<PlayerHealthManager>().playerAlive;
+        if (playerAlive)
+        {
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
     }
 }
