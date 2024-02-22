@@ -12,4 +12,34 @@ public class SceneManaging : MonoBehaviour
             SceneManager.LoadScene("MainMenu");
         }
     }
+
+    public void ToCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void ToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ToHelp()
+    {
+        SceneManager.LoadScene("Help");
+    }
+
+    public void ToPlay()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void ToSettings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
