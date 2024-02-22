@@ -16,9 +16,18 @@ public class PlayerHealthManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D col)
     {
-        
+        if(col.tag == "KillPlayer")
+        {
+            healthBar.SetHealth(0);
+            playerHealth = 0;
+        }
+        else if (col.tag == "HealPlayer")
+        {
+            healthBar.SetMaxHealth((int)maxHealth);
+            playerHealth = maxHealth;
+        }
     }
+
 }
