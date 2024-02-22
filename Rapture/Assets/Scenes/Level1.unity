@@ -381,8 +381,8 @@ GameObject:
   - component: {fileID: 306706237}
   - component: {fileID: 306706236}
   - component: {fileID: 306706235}
-  - component: {fileID: 306706239}
   - component: {fileID: 306706240}
+  - component: {fileID: 306706241}
   m_Layer: 6
   m_Name: Slime_1
   m_TagString: Untagged
@@ -520,19 +520,6 @@ Transform:
   - {fileID: 1149161777}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &306706239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306706234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db47e6248046bba409f89f2d7a515afd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!114 &306706240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,6 +534,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileType: {fileID: 3281146342877969111, guid: 00dd5537ab337a74b9c05f8925eeee4f, type: 3}
   projectilePos: {fileID: 1149161777}
+--- !u!114 &306706241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306706234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e7ab98c632c484fa5d76ede2fe496f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &315057735
 GameObject:
   m_ObjectHideFlags: 0
