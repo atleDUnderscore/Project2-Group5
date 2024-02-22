@@ -16,9 +16,6 @@ public class PlayerCombat : MonoBehaviour
     
     public Animator animator;
 
-    // Player Health reqs
-    public int playerHealth = 100;
-
 
     // Update is called once per frame
     void Update()
