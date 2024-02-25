@@ -5,40 +5,56 @@ using UnityEngine;
 public class SlimeBossAttacks : MonoBehaviour
 {
     public GameObject projectileType;
+    public GameObject projectile2Type;
     public Transform projectilePos;
     private GameObject player;
+    [SerializeField] HealthBar healthBar;
     private float attackTimer;
     private float rapidfireTimer;
     public float radius;
+    public float meleeRadius;
+    public float meleeDamage;
     public Transform eruptPointA;
     public Transform eruptPointB;
     public Transform eruptPointC;
-    public Transform eruptPointD;
-    public Transform eruptPointE;
-    public Transform eruptPointF;
+    public Transform meleePos;
+    public LayerMask playerLayer;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        healthBar = GameObject.Find("Health Bar").GetComponent<HealthBar>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        float distance = Vector2.Distance(transform.position, player.transform.position);
+        float distance = Vector2.Distance(meleePos.position, player.transform.position);
         attackTimer += Time.deltaTime;
+        //Debug.Log("Distance is " + distance);
 
-
-        if (distance < 2 && attackTimer > 4)
+        if(attackTimer > 4)
         {
+            if (distance <= 5)
+            {
+                Debug.Log("Is melee ");
+                MeleeAttack();
+            }
+            else
+            {
+                int RngAttack = Random.Range(0, 2);
+                if(RngAttack == 1)
+                {
+                    FireProjectiles();
+                }          
+                else
+                {
+                    EruptProjectiles();
+                }
+            }
             attackTimer = 0;
-            MeleeAttack();
-        }
-        else if(distance > 2 && attackTimer > 4)
-        {
-            attackTimer = 0;
-            FireProjectiles();
         }
 
     }
@@ -46,13 +62,21 @@ public class SlimeBossAttacks : MonoBehaviour
     private IEnumerator Rapidfire()
     {
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
+        Instantiate(projectileType, projectilePos.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.2f);
+        Instantiate(projectileType, projectilePos.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.2f);
+        Instantiate(projectileType, projectilePos.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.2f);
+        Instantiate(projectileType, projectilePos.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.2f);
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
     }
 
@@ -63,16 +87,16 @@ public class SlimeBossAttacks : MonoBehaviour
 
     void EruptProjectiles()
     {
-        Instantiate(projectileType, eruptPointA.position, Quaternion.identity);
-        Instantiate(projectileType, eruptPointB.position, Quaternion.identity);
-        Instantiate(projectileType, eruptPointC.position, Quaternion.identity);
-        Instantiate(projectileType, eruptPointD.position, Quaternion.identity);
-        Instantiate(projectileType, eruptPointE.position, Quaternion.identity);
-        Instantiate(projectileType, eruptPointF.position, Quaternion.identity);
+        Instantiate(projectile2Type, eruptPointA.position, Quaternion.identity);
+        Instantiate(projectile2Type, eruptPointB.position, Quaternion.identity);
+        Instantiate(projectile2Type, eruptPointC.position, Quaternion.identity);
     }
 
     void MeleeAttack()
     {
+        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(meleePos.position, meleeRadius, playerLayer);
+        player.GetComponent<PlayerHealthManager>().playerHealth -= meleeDamage;
+        healthBar.SetHealth((int)player.GetComponent<PlayerHealthManager>().playerHealth);
 
     }
 
@@ -81,10 +105,8 @@ public class SlimeBossAttacks : MonoBehaviour
         Gizmos.DrawWireSphere(eruptPointA.transform.position, radius);
         Gizmos.DrawWireSphere(eruptPointB.transform.position, radius);
         Gizmos.DrawWireSphere(eruptPointC.transform.position, radius);
-        Gizmos.DrawWireSphere(eruptPointD.transform.position, radius);
-        Gizmos.DrawWireSphere(eruptPointE.transform.position, radius);
-        Gizmos.DrawWireSphere(eruptPointF.transform.position, radius);
         Gizmos.DrawWireSphere(projectilePos.transform.position, radius);
+        Gizmos.DrawWireSphere(meleePos.transform.position, meleeRadius);
 
     }
 }
