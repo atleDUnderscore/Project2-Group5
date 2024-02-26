@@ -21,20 +21,16 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 986010417, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
-    - time: 0.083333336
-      value: {fileID: 1239036295, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
-    - time: 0.16666667
-      value: {fileID: 1655805217, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
-    - time: 0.25
-      value: {fileID: -702439462, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
-    - time: 0.33333334
-      value: {fileID: 2026531754, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
-    - time: 0.41666666
       value: {fileID: -1572242578, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
-    - time: 0.5
+    - time: 0.083333336
+      value: {fileID: -1572242578, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
+    - time: 0.16666667
+      value: {fileID: -1572242578, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
+    - time: 0.25
+      value: {fileID: -1572242578, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
+    - time: 0.33333334
       value: {fileID: 721081190, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
-    - time: 0.5833333
+    - time: 0.41666666
       value: {fileID: 1304469517, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
     attribute: m_Sprite
     path: 
@@ -58,11 +54,9 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 986010417, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
-    - {fileID: 1239036295, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
-    - {fileID: 1655805217, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
-    - {fileID: -702439462, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
-    - {fileID: 2026531754, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
+    - {fileID: -1572242578, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
+    - {fileID: -1572242578, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
+    - {fileID: -1572242578, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
     - {fileID: -1572242578, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
     - {fileID: 721081190, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
     - {fileID: 1304469517, guid: bbcc58727e4c76642808be91b8d3ffbc, type: 3}
@@ -71,7 +65,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6666666
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -90,4 +84,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.33333334
+    functionName: MeleeAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

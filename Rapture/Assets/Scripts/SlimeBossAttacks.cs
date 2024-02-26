@@ -19,12 +19,18 @@ public class SlimeBossAttacks : MonoBehaviour
     public Transform eruptPointC;
     public Transform meleePos;
     public LayerMask playerLayer;
+    private Animator animator;
+
+    public AudioClip[] audioClipArray;
+    AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBar>();
+        animator = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,11 +45,12 @@ public class SlimeBossAttacks : MonoBehaviour
         {
             if (distance <= 5)
             {
-                Debug.Log("Is melee ");
-                MeleeAttack();
+                //Melee attack method is called on the animator component so the damage isn't dealt until the boss hand comes down
+                animator.SetTrigger("isMeleeAttacking");              
             }
             else
             {
+                animator.SetTrigger("isRangedAttacking");
                 int RngAttack = Random.Range(0, 2);
                 if(RngAttack == 1)
                 {
@@ -58,7 +65,7 @@ public class SlimeBossAttacks : MonoBehaviour
         }
 
     }
-    
+
     private IEnumerator Rapidfire()
     {
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
