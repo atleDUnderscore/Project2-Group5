@@ -16,7 +16,15 @@ public class PlayerCombat : MonoBehaviour
     
     public Animator animator;
 
+    public AudioClip attackSwing;
+    public AudioClip attackHit;
+    private AudioSource playerAudio;
 
+
+    void Start()
+    {
+        playerAudio = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -25,11 +33,13 @@ public class PlayerCombat : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext context)
     {
+        
         // Get Keycode performance
         if(context.performed && Time.time >= nextAttackTime)
         {
         // Attack animation
         animator.SetTrigger("Attack");
+        playerAudio.PlayOneShot(attackSwing);
 
         // Detects Enemies in range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, radius, enemyLayers);
@@ -38,7 +48,9 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<EnemyHealthManager>().TakeDamage(attackDamage);
+            playerAudio.PlayOneShot(attackHit);
             Debug.Log("We Hit" + enemy.name);
+
         }
 
         //Reset Attack Time

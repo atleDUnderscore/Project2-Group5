@@ -6,7 +6,15 @@ public class CameraSwitcher : MonoBehaviour
 {
 
     public Animator animator;
-    public AudioSource audio;
+    public Level1MusicManager musicManager;
+    [SerializeField] private Transform bossLoc;
+    [SerializeField] private GameObject boss;
+    
+
+    void Start()
+    {
+        musicManager.GetComponent<AudioSource>();        
+    }
 
 
     void OnTriggerEnter2D(Collider2D other)
@@ -14,7 +22,17 @@ public class CameraSwitcher : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             SwitchState();
+            musicManager.musicAudio.Stop();
+            musicManager.musicAudio.clip = musicManager.bossMusic;
+            musicManager.musicAudio.Play();
+            SpawnBoss();
+            Destroy(gameObject);
         }
+    }
+
+    void SpawnBoss()
+    {
+        Instantiate(boss, bossLoc.position, Quaternion.identity);
     }
 
     void SwitchState()

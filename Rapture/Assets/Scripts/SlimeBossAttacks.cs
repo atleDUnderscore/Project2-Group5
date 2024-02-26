@@ -7,13 +7,16 @@ public class SlimeBossAttacks : MonoBehaviour
     public GameObject projectileType;
     public GameObject projectile2Type;
     public Transform projectilePos;
+
     private GameObject player;
     [SerializeField] HealthBar healthBar;
+
     private float attackTimer;
     private float rapidfireTimer;
     public float radius;
     public float meleeRadius;
     public float meleeDamage;
+
     public Transform eruptPointA;
     public Transform eruptPointB;
     public Transform eruptPointC;
@@ -21,8 +24,17 @@ public class SlimeBossAttacks : MonoBehaviour
     public LayerMask playerLayer;
     private Animator animator;
 
-    public AudioClip[] audioClipArray;
-    AudioSource audio;
+    public AudioClip bossSpawnVocal;
+    public AudioClip meleeAttackAudio;
+    public AudioClip meleeAttackVocal;
+    public AudioClip rangedAttackAudio;
+    public AudioClip rapidFireVocal;
+    public AudioClip explosionAttackVocal;
+    public AudioClip explosionAttackAudio;
+    public AudioClip takeDamageAudio;
+    public AudioClip giveDamageAudio;
+    public AudioClip dieAudio;
+    AudioSource boss1Audio;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +42,8 @@ public class SlimeBossAttacks : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBar>();
         animator = GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
+        boss1Audio = GetComponent<AudioSource>();
+        boss1Audio.PlayOneShot(bossSpawnVocal);
     }
 
     // Update is called once per frame
@@ -46,7 +59,9 @@ public class SlimeBossAttacks : MonoBehaviour
             if (distance <= 5)
             {
                 //Melee attack method is called on the animator component so the damage isn't dealt until the boss hand comes down
-                animator.SetTrigger("isMeleeAttacking");              
+                animator.SetTrigger("isMeleeAttacking");
+                boss1Audio.PlayOneShot(meleeAttackVocal);
+                boss1Audio.PlayOneShot(meleeAttackAudio);             
             }
             else
             {
@@ -55,10 +70,14 @@ public class SlimeBossAttacks : MonoBehaviour
                 if(RngAttack == 1)
                 {
                     FireProjectiles();
+                    boss1Audio.PlayOneShot(rapidFireVocal);
+                    boss1Audio.PlayOneShot(rangedAttackAudio);
                 }          
                 else
                 {
                     EruptProjectiles();
+                    boss1Audio.PlayOneShot(explosionAttackAudio, 0.6f);
+                    boss1Audio.PlayOneShot(explosionAttackVocal);
                 }
             }
             attackTimer = 0;
@@ -104,7 +123,7 @@ public class SlimeBossAttacks : MonoBehaviour
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(meleePos.position, meleeRadius, playerLayer);
         player.GetComponent<PlayerHealthManager>().playerHealth -= meleeDamage;
         healthBar.SetHealth((int)player.GetComponent<PlayerHealthManager>().playerHealth);
-
+        boss1Audio.PlayOneShot(giveDamageAudio);
     }
 
     private void OnDrawGizmos()
@@ -114,6 +133,5 @@ public class SlimeBossAttacks : MonoBehaviour
         Gizmos.DrawWireSphere(eruptPointC.transform.position, radius);
         Gizmos.DrawWireSphere(projectilePos.transform.position, radius);
         Gizmos.DrawWireSphere(meleePos.transform.position, meleeRadius);
-
     }
 }

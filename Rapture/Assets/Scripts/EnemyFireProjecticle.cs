@@ -8,6 +8,9 @@ public class EnemyFireProjectile : MonoBehaviour
     public GameObject projectileType;
     public Transform projectilePos;
 
+    private AudioSource slime2Audio;
+    public AudioClip slime2ProjectileAudio;
+
     private GameObject player;
 
     private float timer;
@@ -16,6 +19,7 @@ public class EnemyFireProjectile : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        slime2Audio = GetComponent<AudioSource>();
         
     }
 
@@ -41,6 +45,7 @@ public class EnemyFireProjectile : MonoBehaviour
     void FireProjectile()
     {
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
+        slime2Audio.PlayOneShot(slime2ProjectileAudio);
     }
 
 
