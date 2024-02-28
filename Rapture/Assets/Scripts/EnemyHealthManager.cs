@@ -9,6 +9,7 @@ public class EnemyHealthManager : MonoBehaviour
     public int maxHealth = 100;
     int currentHealth;
     [SerializeField] Slider enemyHBar;
+    [SerializeField] private DamageFlash damageFlash;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class EnemyHealthManager : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        damageFlash.Flash();
         currentHealth -= damage;
         enemyHBar.value = currentHealth;
 
