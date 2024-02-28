@@ -56,7 +56,7 @@ public class SlimeBossAttacks : MonoBehaviour
 
         if(attackTimer > 4)
         {
-            if (distance <= 5)
+            if (distance <= 2)
             {
                 //Melee attack method is called on the animator component so the damage isn't dealt until the boss hand comes down
                 animator.SetTrigger("isMeleeAttacking");
