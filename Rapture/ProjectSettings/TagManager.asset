@@ -6,6 +6,7 @@ TagManager:
   tags:
   - KillPlayer
   - HealPlayer
+  - Soul
   layers:
   - Default
   - TransparentFX
