@@ -19,6 +19,7 @@ public class PlayerCombat : MonoBehaviour
 
     public AudioClip attackSwing;
     public AudioClip attackHit;
+    public AudioClip soulAttack;
     private AudioSource playerAudio;
 
     //Soul Counter
@@ -43,7 +44,7 @@ public class PlayerCombat : MonoBehaviour
             soulCount--;
             Debug.Log(soulCount);
         }
-        SoulCounter();
+        //SoulCounter();
     }
 
     public void Attack(InputAction.CallbackContext context)
@@ -67,13 +68,19 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("We Hit" + enemy.name);
 
         }
-
         //Reset Attack Time
         nextAttackTime = Time.time + 1f / attackRate;
-
         }
-    
+    }
 
+    public void RangedAttack(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            animator.SetTrigger("Attack");
+            playerAudio.PlayOneShot(soulAttack);
+            //FireSoul();
+        }
     }
 
     private void OnDrawGizmosSelected()

@@ -5,6 +5,7 @@ using UnityEngine;
 public class FlyingEnemyAttacks : MonoBehaviour
 {
     private GameObject player;
+    private Rigidbody2D playerRb;
 
 
     private float attackTimer;
@@ -12,6 +13,8 @@ public class FlyingEnemyAttacks : MonoBehaviour
     public Transform meleePos;
     public LayerMask playerLayer;
     public float meleeDamage;
+
+    public float KickbackForce;
 
     [SerializeField] HealthBar healthBar;
 
@@ -25,6 +28,7 @@ public class FlyingEnemyAttacks : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        playerRb = player.GetComponent<Rigidbody2D>();
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBar>();
         animator = GetComponent<Animator>();
         flyingEnemyAudio = GetComponent<AudioSource>();
@@ -37,9 +41,9 @@ public class FlyingEnemyAttacks : MonoBehaviour
         attackTimer += Time.deltaTime;
         //Debug.Log("Distance is " + distance);
 
-        if(attackTimer > 2)
+        if(attackTimer > 4)
         {
-            if (distance <= 5)
+            if (distance <= 3)
             {
                 //Melee attack method is called on the animator component so the damage isn't dealt until the boss hand comes down
                 animator.SetTrigger("Attack");
@@ -52,8 +56,22 @@ public class FlyingEnemyAttacks : MonoBehaviour
     void MeleeAttack()
     {
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(meleePos.position, meleeRadius, playerLayer);
+
+        foreach(Collider2D player in hitPlayer)
+        {
         player.GetComponent<PlayerHealthManager>().playerHealth -= meleeDamage;
         healthBar.SetHealth((int)player.GetComponent<PlayerHealthManager>().playerHealth);
+
+        if(transform.position.x > player.transform.position.x)
+        {
+            playerRb.velocity = new Vector2(-KickbackForce, KickbackForce);
+        }
+        else
+        {
+            playerRb.velocity = new Vector2(KickbackForce, KickbackForce);
+        }
+
+        }
     }
 
     private void OnDrawGizmos()

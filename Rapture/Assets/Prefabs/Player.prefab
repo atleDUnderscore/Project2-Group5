@@ -211,9 +211,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &4065044726170187437
 MonoBehaviour:
@@ -438,6 +438,10 @@ MonoBehaviour:
   animator: {fileID: 1817497305954082889}
   attackSwing: {fileID: 8300000, guid: bff559fd9b86c53498347b861b7b4110, type: 3}
   attackHit: {fileID: 8300000, guid: 576be312c04138c41a2f8a026c8cab4b, type: 3}
+  soulAttack: {fileID: 0}
+  soulCOne: {fileID: 0}
+  soulCTwo: {fileID: 0}
+  soulCThree: {fileID: 0}
 --- !u!114 &6542580543944938607
 MonoBehaviour:
   m_ObjectHideFlags: 0

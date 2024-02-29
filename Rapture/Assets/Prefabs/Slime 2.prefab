@@ -278,7 +278,7 @@ Transform:
   m_GameObject: {fileID: 4172298183484279366}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.430145, y: -0.13, z: -10.211611}
+  m_LocalPosition: {x: 18.430145, y: -0.13, z: 0}
   m_LocalScale: {x: 0.6962817, y: 0.6316979, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -328,7 +328,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ceae0552e658c7c42aa82db75bad811b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  enemyHBar: {fileID: 0}
+  enemyHBar: {fileID: 5655330218853216288}
   damageFlash: {fileID: -8842374191571950227}
 --- !u!114 &1350189229467629187
 MonoBehaviour:
@@ -446,7 +446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 8297713924357551001}
   pointB: {fileID: 7074653414368258091}
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 3841883352546187594, guid: ded4ac74ce5d47a4cb8499af312df214, type: 3}
 --- !u!95 &4650235014146790764
 Animator:
   serializedVersion: 5
@@ -767,9 +767,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 2000
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 625
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

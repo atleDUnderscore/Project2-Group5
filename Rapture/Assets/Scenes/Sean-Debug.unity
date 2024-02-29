@@ -4567,84 +4567,15 @@ PrefabInstance:
       propertyPath: playerAlive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6543246470120009041, guid: ded4ac74ce5d47a4cb8499af312df214, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ded4ac74ce5d47a4cb8499af312df214, type: 3}
---- !u!1001 &9095874577268657256
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1696339180618637375, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_Name
-      value: Slime Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 3396148855027686867, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3396148855027686867, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4294067006154389346, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: enemyHBar
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6992251296099929668, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 263.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 6992251296099929668, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 6992251296099929668, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6992251296099929668, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6992251296099929668, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6992251296099929668, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6992251296099929668, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6992251296099929668, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6992251296099929668, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6992251296099929668, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006544266511764341, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 32669399}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a09eb67610e0a1743a6e9002d4444367, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4665,7 +4596,6 @@ SceneRoots:
   - {fileID: 1122579718}
   - {fileID: 1512749282}
   - {fileID: 1820005112}
-  - {fileID: 9095874577268657256}
   - {fileID: 1597437364}
   - {fileID: 660552024}
   - {fileID: 712080210}

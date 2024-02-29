@@ -9,6 +9,8 @@ public class SlimeBossAttacks : MonoBehaviour
     public Transform projectilePos;
 
     private GameObject player;
+    private Rigidbody2D playerRb;
+    
     [SerializeField] HealthBar healthBar;
 
     private float attackTimer;
@@ -16,6 +18,7 @@ public class SlimeBossAttacks : MonoBehaviour
     public float radius;
     public float meleeRadius;
     public float meleeDamage;
+    public float KickbackForce;
 
     public Transform eruptPointA;
     public Transform eruptPointB;
@@ -40,6 +43,7 @@ public class SlimeBossAttacks : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        playerRb = player.GetComponent<Rigidbody2D>();
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBar>();
         animator = GetComponent<Animator>();
         boss1Audio = GetComponent<AudioSource>();
@@ -121,9 +125,13 @@ public class SlimeBossAttacks : MonoBehaviour
     void MeleeAttack()
     {
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(meleePos.position, meleeRadius, playerLayer);
-        player.GetComponent<PlayerHealthManager>().playerHealth -= meleeDamage;
-        healthBar.SetHealth((int)player.GetComponent<PlayerHealthManager>().playerHealth);
-        boss1Audio.PlayOneShot(giveDamageAudio);
+        foreach(Collider2D player in hitPlayer)
+        {
+            playerRb.velocity = new Vector2(-KickbackForce, KickbackForce);
+            player.GetComponent<PlayerHealthManager>().playerHealth -= meleeDamage;
+            healthBar.SetHealth((int)player.GetComponent<PlayerHealthManager>().playerHealth);
+            boss1Audio.PlayOneShot(giveDamageAudio);
+        }
     }
 
     private void OnDrawGizmos()

@@ -219,6 +219,7 @@ MonoBehaviour:
   radius: 1
   meleeRadius: 4
   meleeDamage: 20
+  KickbackForce: 10
   eruptPointA: {fileID: 430550061185464302}
   eruptPointB: {fileID: 294511076502340392}
   eruptPointC: {fileID: 1305998812688996392}

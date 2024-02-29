@@ -10,12 +10,16 @@ public class EnemyProjectileNonFollowing : MonoBehaviour
     public float force;
     private float timer;
     public float damage;
+
+    private AudioSource projectileAudio;
+    public AudioClip hitSound;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBar>();
+        projectileAudio = GetComponent<AudioSource>();
 
         Vector3 direction = player.transform.position - transform.position;
         rb.velocity = new Vector2(-1, 0).normalized * force;
@@ -41,7 +45,7 @@ public class EnemyProjectileNonFollowing : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerHealthManager>().playerHealth -= damage;
             healthBar.SetHealth((int)other.gameObject.GetComponent<PlayerHealthManager>().playerHealth);
-
+            projectileAudio.PlayOneShot(hitSound);
             Destroy(gameObject);
         }
     }

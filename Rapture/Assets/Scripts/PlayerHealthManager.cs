@@ -8,6 +8,7 @@ public class PlayerHealthManager : MonoBehaviour
     public float maxHealth = 100;
     public float playerHealth;
     public bool playerAlive;
+    public bool isTakingDamage;
     
     // Start is called before the first frame update
     void Start()
@@ -28,12 +29,12 @@ public class PlayerHealthManager : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            playerAlive = true;
-            playerHealth = maxHealth;
-            healthBar.SetMaxHealth((int)maxHealth);
-        }
+        //if(Input.GetKeyDown(KeyCode.LeftShift))
+       // {
+        //    playerAlive = true;
+        //    playerHealth = maxHealth;
+        //    healthBar.SetMaxHealth((int)maxHealth);
+       // }
     }
 
     void OnTriggerEnter2D(Collider2D col)
