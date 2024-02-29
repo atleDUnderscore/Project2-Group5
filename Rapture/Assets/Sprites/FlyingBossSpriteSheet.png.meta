@@ -1,0 +1,589 @@
+fileFormatVersion: 2
+guid: 38aaf7b887346324585860a74b60d0c8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 6772
+        y: 290
+        width: 1321
+        height: 978
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86b5d4a0eb971148b414133aca082aa
+      internalID: 441086180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 5484
+        y: 237
+        width: 1230
+        height: 1110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f75a93174034ce4aa478335b7aa55d9
+      internalID: 1725507420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 4146
+        y: 213
+        width: 1222
+        height: 1108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19f62ce25f25d24aa64a688e44d6a63
+      internalID: -620626955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 2642
+        y: 239
+        width: 1395
+        height: 857
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce1272c353697040889908fc821852f
+      internalID: 662675719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 237
+        width: 1392
+        height: 522
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d74e198ee312949af8b32f2762b4d7
+      internalID: 1469111748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 6999
+        y: 1520
+        width: 1145
+        height: 969
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10de41fae7818a54e96c235420e82ff9
+      internalID: 333105975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 5857
+        y: 1520
+        width: 1047
+        height: 1115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532d861f3683f884f844d68f85bc1aa9
+      internalID: -1116700231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 4672
+        y: 1536
+        width: 1048
+        height: 1119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a80b7ad3aaa9646919aa188d75b617
+      internalID: -403215872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 3325
+        y: 1588
+        width: 1215
+        height: 853
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad85ee73f7fde26428ba77aff786844c
+      internalID: 1417600240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 1590
+        width: 1202
+        height: 516
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed26aa96a458254e885ceb568879f9a
+      internalID: -1627018306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 6829
+        y: 2796
+        width: 1333
+        height: 969
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b2c6e6a2239c44a9506d41c384bded
+      internalID: 267071914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 5470
+        y: 2777
+        width: 1228
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc69b135a0cdb749a29b7424be5c07e
+      internalID: 1104317707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 4062
+        y: 2810
+        width: 1303
+        height: 1114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2165a6cab1704b34eb78efa9a20934ee
+      internalID: 378282125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 2888
+        width: 1461
+        height: 876
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9419abacf0dddf748bf2776ebe4068a7
+      internalID: 136864041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 2948
+        width: 1383
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7974c523701f74c9d8e862047c2c53
+      internalID: 1956288620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 6803
+        y: 4119
+        width: 1326
+        height: 981
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709a8248db5a9a84f9206412be60a3ad
+      internalID: -1617626474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 5648
+        y: 4105
+        width: 1136
+        height: 1104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0046c1813c7524398ba9c7f0b4edff
+      internalID: -997362063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 4501
+        y: 4102
+        width: 1111
+        height: 1109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1be5afbba8f1046a5215db674f223a
+      internalID: 790619219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 4163
+        width: 1238
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446fdfff741c0ce40ac004d2bfc4cfe1
+      internalID: -1427221456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 4164
+        width: 1387
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c39a2e5a2a76e4e8552b920d817afe
+      internalID: 1309879248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingBossSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 4190
+        width: 1397
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83346c9c7803fda4091b655b7a8d9e6c
+      internalID: 1893830592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FlyingBossSpriteSheet_0: 441086180
+      FlyingBossSpriteSheet_1: 1725507420
+      FlyingBossSpriteSheet_10: 267071914
+      FlyingBossSpriteSheet_11: 1104317707
+      FlyingBossSpriteSheet_12: 378282125
+      FlyingBossSpriteSheet_13: 136864041
+      FlyingBossSpriteSheet_14: 1956288620
+      FlyingBossSpriteSheet_15: -1617626474
+      FlyingBossSpriteSheet_16: -997362063
+      FlyingBossSpriteSheet_17: 790619219
+      FlyingBossSpriteSheet_18: -1427221456
+      FlyingBossSpriteSheet_19: 1309879248
+      FlyingBossSpriteSheet_2: -620626955
+      FlyingBossSpriteSheet_20: 1893830592
+      FlyingBossSpriteSheet_3: 662675719
+      FlyingBossSpriteSheet_4: 1469111748
+      FlyingBossSpriteSheet_5: 333105975
+      FlyingBossSpriteSheet_6: -1116700231
+      FlyingBossSpriteSheet_7: -403215872
+      FlyingBossSpriteSheet_8: 1417600240
+      FlyingBossSpriteSheet_9: -1627018306
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

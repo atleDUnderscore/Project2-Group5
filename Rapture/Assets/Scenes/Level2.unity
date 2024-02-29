@@ -9625,6 +9625,7 @@ MonoBehaviour:
   maxHealth: 100
   enemyHBar: {fileID: 5655330218876001603}
   damageFlash: {fileID: 380997845305542670}
+  soulObject: {fileID: 0}
 --- !u!114 &7706436715245680815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9640,6 +9641,7 @@ MonoBehaviour:
   maxHealth: 100
   enemyHBar: {fileID: 5655330218374773694}
   damageFlash: {fileID: 380997845945167603}
+  soulObject: {fileID: 0}
 --- !u!114 &7706436715601857805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9655,6 +9657,7 @@ MonoBehaviour:
   maxHealth: 100
   enemyHBar: {fileID: 5655330217615920668}
   damageFlash: {fileID: 380997846260063057}
+  soulObject: {fileID: 0}
 --- !u!114 &7706436716041415917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9670,6 +9673,7 @@ MonoBehaviour:
   maxHealth: 100
   enemyHBar: {fileID: 5655330218048532476}
   damageFlash: {fileID: 380997846625827505}
+  soulObject: {fileID: 0}
 --- !u!223 &7706997047056577871
 Canvas:
   m_ObjectHideFlags: 0
