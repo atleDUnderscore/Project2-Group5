@@ -60,12 +60,22 @@ public class EnemyPatrol : MonoBehaviour
             Flip();
             currentPoint = pointB.transform;
         }
+
+        
     }
 
     private void Stop()
     {
         speed = 0;
         rb.velocity = new Vector2(speed, 0);
+        if(transform.position.x > player.transform.position.x)
+        {
+            transform.localScale = new Vector3(0.6962817f,0.6316979f,1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(-0.6962817f,0.63169791f,1);
+        }
     }
 
     private void OnDrawGizmos()
