@@ -12,7 +12,7 @@ public class TimerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeRemaining = 180f;
+        timeRemaining = 300f;
         timerRunning = true;
     }
 

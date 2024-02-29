@@ -7,7 +7,11 @@ public class SceneManaging : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "Player" && SceneManager.GetActiveScene().name == "Level1")
+        if (col.tag == "Player" && SceneManager.GetActiveScene().name == "Level1")
+        {
+            SceneManager.LoadScene("Level2");
+        }
+        if (col.tag == "Player" && SceneManager.GetActiveScene().name == "Level2")
         {
             SceneManager.LoadScene("MainMenu");
         }
