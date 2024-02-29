@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 4022225259309754192}
   - component: {fileID: 6542580543944938607}
   - component: {fileID: 996517249301928357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3facbecd06a361e42b929f664ee8cb5a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -458,6 +458,7 @@ MonoBehaviour:
   maxHealth: 100
   playerHealth: 0
   playerAlive: 0
+  isTakingDamage: 0
 --- !u!82 &996517249301928357
 AudioSource:
   m_ObjectHideFlags: 0
