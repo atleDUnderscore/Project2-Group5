@@ -336,6 +336,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: de910a66-9055-4b32-b6e6-dae12ffc85ae
     m_ActionName: Player/Attack[/Keyboard/k]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4022225259309754192}
+        m_TargetAssemblyTypeName: PlayerCombat, Assembly-CSharp
+        m_MethodName: RangedAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 41a7c27d-e007-476e-b27e-1f5577928b90
+    m_ActionName: Player/RangedAttack[/Keyboard/l]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -358,6 +374,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
+  isFacingRight: 1
   playerAlive: 0
   animator: {fileID: 1817497305954082889}
 --- !u!70 &5304517040464084516
@@ -435,6 +452,8 @@ MonoBehaviour:
     m_Bits: 64
   attackDamage: 40
   attackRate: 2
+  projectileType: {fileID: 127950442828353075, guid: 431fb2407a0cc9a46816d1739ad13b19, type: 3}
+  projectilePos: {fileID: 1489566153935267152}
   animator: {fileID: 1817497305954082889}
   attackSwing: {fileID: 8300000, guid: bff559fd9b86c53498347b861b7b4110, type: 3}
   attackHit: {fileID: 8300000, guid: 576be312c04138c41a2f8a026c8cab4b, type: 3}
@@ -455,6 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+  playerSpawn: {fileID: 0}
   maxHealth: 100
   playerHealth: 0
   playerAlive: 0

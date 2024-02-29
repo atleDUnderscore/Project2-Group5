@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHealthManager : MonoBehaviour
 {
     [SerializeField] HealthBar healthBar;
+    [SerializeField] GameObject playerSpawn;
     public float maxHealth = 100;
     public float playerHealth;
     public bool playerAlive;
@@ -26,6 +27,7 @@ public class PlayerHealthManager : MonoBehaviour
             Debug.Log("Player is Dead");
             playerHealth = 1;
             playerAlive = false;
+            StartCoroutine(PlayerDeathTimer());
 
         }
 
@@ -49,6 +51,19 @@ public class PlayerHealthManager : MonoBehaviour
             healthBar.SetMaxHealth((int)maxHealth);
             playerHealth = maxHealth;
         }
+        else if(col.tag == "Respawn")
+        {
+            playerSpawn.transform.position = col.gameObject.transform.GetChild(0).position;
+        }
+    }
+
+    IEnumerator PlayerDeathTimer()
+    {
+        yield return new WaitForSeconds(2.5f);
+        this.gameObject.transform.position = playerSpawn.transform.position;
+        playerHealth = maxHealth;
+        playerAlive = true;
+        healthBar.SetMaxHealth((int)maxHealth);
     }
 
 }

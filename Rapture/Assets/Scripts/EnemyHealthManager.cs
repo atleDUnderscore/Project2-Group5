@@ -10,6 +10,7 @@ public class EnemyHealthManager : MonoBehaviour
     int currentHealth;
     [SerializeField] Slider enemyHBar;
     [SerializeField] private DamageFlash damageFlash;
+    [SerializeField] GameObject soulObject;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class EnemyHealthManager : MonoBehaviour
 
         //GetComponent<Collider2D>().enabled = false;
         //this.enabled = false;
+        Instantiate(soulObject, gameObject.transform.position, Quaternion.identity);
 
         Destroy(gameObject);
        

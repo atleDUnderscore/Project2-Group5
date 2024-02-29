@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: -8842374191571950227}
   m_Layer: 6
   m_Name: Slime 2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,6 +432,7 @@ MonoBehaviour:
   maxHealth: 100
   enemyHBar: {fileID: 5655330218853216288}
   damageFlash: {fileID: -8842374191571950227}
+  soulObject: {fileID: 4376849641955989563, guid: e89658075b12a63469d4ed517375979f, type: 3}
 --- !u!114 &1350189229467629187
 MonoBehaviour:
   m_ObjectHideFlags: 0

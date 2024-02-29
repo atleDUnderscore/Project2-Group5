@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private float speed = 6f;
     private float jumpingPower = 8f;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
     [SerializeField] bool playerAlive;
 
     // Animation Reqs
@@ -88,6 +88,11 @@ public class PlayerMovement : MonoBehaviour
         if (playerAlive)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
+        else if(!playerAlive)
+        {
+            rb.velocity = new Vector2(horizontal * speed * 0, rb.velocity.y);
+
         }
     }
 }

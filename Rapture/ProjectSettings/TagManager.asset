@@ -7,6 +7,7 @@ TagManager:
   - KillPlayer
   - HealPlayer
   - Soul
+  - Enemy
   layers:
   - Default
   - TransparentFX

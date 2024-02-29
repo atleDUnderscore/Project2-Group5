@@ -14,6 +14,9 @@ public class PlayerCombat : MonoBehaviour
     public int attackDamage = 20;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+    [SerializeField] GameObject projectileType;
+    [SerializeField] GameObject projectilePos;
+
     
     public Animator animator;
 
@@ -44,14 +47,14 @@ public class PlayerCombat : MonoBehaviour
             soulCount--;
             Debug.Log(soulCount);
         }
-        //SoulCounter();
+        SoulCounter();
     }
 
     public void Attack(InputAction.CallbackContext context)
     {
         
         // Get Keycode performance
-        if(context.performed && Time.time >= nextAttackTime)
+        if (context.performed && Time.time >= nextAttackTime)
         {
         // Attack animation
         animator.SetTrigger("Attack");
@@ -75,11 +78,12 @@ public class PlayerCombat : MonoBehaviour
 
     public void RangedAttack(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        
+        if(context.performed && soulCount > 0)
         {
-            animator.SetTrigger("Attack");
+            //animator.SetTrigger("Attack");
             playerAudio.PlayOneShot(soulAttack);
-            //FireSoul();
+            FireSoul();
         }
     }
 
@@ -109,6 +113,8 @@ public class PlayerCombat : MonoBehaviour
             soulCOne.enabled = true;
             soulCTwo.enabled = true;
             soulCThree.enabled = true;
+            soulCount = 3;
+            Debug.Log(soulCount);
         }
         else if (soulCount == 2)
         {
@@ -133,5 +139,21 @@ public class PlayerCombat : MonoBehaviour
             soulCount = 0;
             Debug.Log(soulCount);
         }
+    }
+
+    void FireSoul()
+    {
+        bool isFacingRight = this.GetComponent<PlayerMovement>().isFacingRight;
+        GameObject playerProj = Instantiate(projectileType, projectilePos.transform.position, Quaternion.identity);
+        Rigidbody2D playerProjRb = playerProj.GetComponent<Rigidbody2D>();
+        if (isFacingRight)
+        {
+            playerProjRb.velocity = new Vector2(10, 0);
+        }
+        else if(!isFacingRight)
+        {
+            playerProjRb.velocity = new Vector2(-10, 0);
+        }
+        Debug.Log("Fired");
     }
 }
