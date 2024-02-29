@@ -11,6 +11,8 @@ public class EnemyProjectileNonFollowing : MonoBehaviour
     private float timer;
     public float damage;
 
+    public bool isSticky;
+
     private AudioSource projectileAudio;
     public AudioClip hitSound;
     // Start is called before the first frame update

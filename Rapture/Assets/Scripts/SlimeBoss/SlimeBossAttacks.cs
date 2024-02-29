@@ -56,7 +56,7 @@ public class SlimeBossAttacks : MonoBehaviour
 
         float distance = Vector2.Distance(meleePos.position, player.transform.position);
         attackTimer += Time.deltaTime;
-        Debug.Log("Distance is " + distance);
+        //Debug.Log("Distance is " + distance);
 
         if(attackTimer > 4)
         {
