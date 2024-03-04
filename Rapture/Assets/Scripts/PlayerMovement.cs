@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpingPower = 8f;
     public bool isFacingRight = true;
     [SerializeField] bool playerAlive;
+    public bool playerIsWebbed = false;
 
     // Animation Reqs
     public Animator animator;
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         PlayerMover();
+        PlayerWebbed();
 
         // Set animator to enable running when horizontal axis input is detected
         if(horizontal > 0 || horizontal < 0)
@@ -93,6 +95,22 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontal * speed * 0, rb.velocity.y);
 
+        }
+    }
+
+    private IEnumerator WebTimer()
+    {       
+        yield return new WaitForSeconds(2f);
+        playerIsWebbed = false;
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+    }
+    public void PlayerWebbed()
+    {
+        if(playerIsWebbed)
+        {
+            animator.SetTrigger("isWebbed");
+            rb.velocity = new Vector2(horizontal * speed * 0, rb.velocity.y);
+            StartCoroutine(WebTimer());
         }
     }
 }
