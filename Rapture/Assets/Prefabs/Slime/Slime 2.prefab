@@ -417,6 +417,7 @@ MonoBehaviour:
   projectileType: {fileID: 3281146342877969111, guid: 00dd5537ab337a74b9c05f8925eeee4f, type: 3}
   projectilePos: {fileID: 587906744891581214}
   slime2ProjectileAudio: {fileID: 8300000, guid: 256fe47d7e5d1a34d88ba4c024016e22, type: 3}
+  attackDelay: 3
 --- !u!114 &7706436714700124977
 MonoBehaviour:
   m_ObjectHideFlags: 0

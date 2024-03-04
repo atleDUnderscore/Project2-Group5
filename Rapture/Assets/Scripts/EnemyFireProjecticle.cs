@@ -14,6 +14,7 @@ public class EnemyFireProjectile : MonoBehaviour
     private GameObject player;
 
     private float timer;
+    public float attackDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,7 @@ public class EnemyFireProjectile : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if(timer > 3)
+            if(timer > attackDelay)
             {
                 timer = 0;
                 FireProjectile();

@@ -9,11 +9,15 @@ public class SpiderPatrol : MonoBehaviour
     public GameObject pointB;
     private Rigidbody2D rb;
     private Transform currentPoint;
-    private float speed;
+    [SerializeField] private float speed;
     private GameObject player;
+    private Rigidbody2D playerRb;
     [SerializeField] private Transform playerTransform;
     private PlayerMovement playerMovement;
-    private float damage = 10f;
+    private EnemyFireProjectile projScript;
+    private float damage = 10;
+    private float kickbackForce;
+
 
     private AudioSource spiderAudio;
     public AudioClip hitSound;
@@ -27,7 +31,9 @@ public class SpiderPatrol : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        playerRb = player.GetComponent<Rigidbody2D>();
         playerMovement = player.GetComponent<PlayerMovement>();
+        projScript = GetComponent<EnemyFireProjectile>();
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBar>();
         currentPoint = pointA.transform;
         speed = 2;
@@ -80,6 +86,7 @@ public class SpiderPatrol : MonoBehaviour
     {
         pointA.SetActive(false);
         pointB.SetActive(false);
+        
         if(playerMovement.playerIsWebbed == false)
         {
             animator.SetBool("isPatrol", false);
@@ -97,27 +104,34 @@ public class SpiderPatrol : MonoBehaviour
         else
         {
             animator.SetBool("isPatrol", true);
-            speed = 8;
-            rb.velocity = new Vector2(speed, 0);
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            speed = 10;
+            //transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
                 if(transform.position.x > player.transform.position.x)
                 {
                     transform.localScale = new Vector3(1,1,1);
+                    rb.velocity = new Vector2(-speed, 0);
                 }
                 else
                 {
                     transform.localScale = new Vector3(-1,1,1);
+                    rb.velocity = new Vector2(speed, 0);
                 }
         }
     }
 
-    private void OnColliderEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
+            projScript.attackDelay = 6;
+            kickbackForce = 3;
             other.gameObject.GetComponent<PlayerHealthManager>().playerHealth -= damage;
             healthBar.SetHealth((int)other.gameObject.GetComponent<PlayerHealthManager>().playerHealth);
+            playerRb.velocity = new Vector2(-kickbackForce, 0);
             spiderAudio.PlayOneShot(hitSound);
+            playerMovement.playerIsWebbed = false;
+            Stop();
+            //transform.position = Vector2.MoveTowards(this.transform.position, this.transform.position, speed * Time.deltaTime);
         }
     }
 
