@@ -8,6 +8,12 @@ TagManager:
   - HealPlayer
   - Soul
   - Enemy
+  - MB_PointA
+  - MB_PointB
+  - MB_PointC
+  - MB_PointD
+  - MB_PointE
+  - MB_PointF
   layers:
   - Default
   - TransparentFX

@@ -6,8 +6,8 @@ public class FlyingEnemyMovement : MonoBehaviour
 {
 
 
-    public GameObject originalPos;
-    public GameObject player;
+    //public GameObject originalPos;
+    private GameObject player;
     public float speed;
 
     private float followDistance;
@@ -17,7 +17,7 @@ public class FlyingEnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -29,14 +29,15 @@ public class FlyingEnemyMovement : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
 
+
         if(followDistance < distanceBetween)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
         }
-        else
-        {
-            transform.position = Vector2.MoveTowards(this.transform.position, originalPos.transform.position, speed * Time.deltaTime);
-        }
+        //else
+        //{
+            //transform.position = Vector2.MoveTowards(this.transform.position, originalPos.transform.position, speed * Time.deltaTime);
+        //}
 
         if(transform.position.x > player.transform.position.x)
         {
