@@ -30,13 +30,15 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] Image soulCOne;
     [SerializeField] Image soulCTwo;
     [SerializeField] Image soulCThree;
-    
+    [SerializeField] HealthBar healthBar;
+
 
 
 
     void Start()
     {
         playerAudio = GetComponent<AudioSource>();
+        
         soulCount = 0;
     }
     // Update is called once per frame
@@ -46,6 +48,12 @@ public class PlayerCombat : MonoBehaviour
         {
             soulCount--;
             Debug.Log(soulCount);
+        }
+        if(Input.GetKeyDown(KeyCode.F) && soulCount > 0)
+        {
+            soulCount--;
+            this.GetComponent<PlayerHealthManager>().playerHealth += 30;
+            healthBar.SetHealth((int)this.GetComponent<PlayerHealthManager>().playerHealth);
         }
         SoulCounter();
     }
