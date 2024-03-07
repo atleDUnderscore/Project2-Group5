@@ -44,6 +44,15 @@ public class SpiderPatrol : MonoBehaviour
     {
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
+        if(transform.position.x > player.transform.position.x)
+        {
+            transform.localScale = new Vector3(1,1,1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(-1,1,1);
+        }
+            
         if(distance > 12)
         {
             Patrol();
@@ -91,15 +100,7 @@ public class SpiderPatrol : MonoBehaviour
         {
             animator.SetBool("isPatrol", false);
             speed = 0;
-            rb.velocity = new Vector2(speed, 0);
-                if(transform.position.x > player.transform.position.x)
-                {
-                    transform.localScale = new Vector3(1,1,1);
-                }
-                else
-                {
-                    transform.localScale = new Vector3(-1,1,1);
-                }
+            rb.velocity = new Vector2(speed, 0);                
         }
         else
         {
