@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
+    
 
 
     // Movement Reqs
@@ -94,7 +95,6 @@ public class PlayerMovement : MonoBehaviour
         else if(!playerAlive)
         {
             rb.velocity = new Vector2(horizontal * speed * 0, rb.velocity.y);
-
         }
     }
 

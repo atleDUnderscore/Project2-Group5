@@ -589,7 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e7ab98c632c484fa5d76ede2fe496f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2000
+  maxHealth: 1200
   enemyHBar: {fileID: 7983695804134447273}
   damageFlash: {fileID: 4144605616649925099}
   soulObject: {fileID: 0}
@@ -617,8 +617,8 @@ MonoBehaviour:
   projectilePos: {fileID: 3298372038308860586}
   projectileType: {fileID: 3281146342877969111, guid: 00dd5537ab337a74b9c05f8925eeee4f, type: 3}
   fireProjSound: {fileID: 8300000, guid: 256fe47d7e5d1a34d88ba4c024016e22, type: 3}
-  changePosSound: {fileID: 0}
-  chargeWarningSound: {fileID: 0}
+  changePosSound: {fileID: 8300000, guid: db1996fac3369be4d8cbf99b5c5246d9, type: 3}
+  chargeWarningSound: {fileID: 8300000, guid: cc4cf10a98acf2e46841e164bfc89be2, type: 3}
 --- !u!70 &956065530940520577
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

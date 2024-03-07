@@ -10,6 +10,9 @@ public class PlayerHealthManager : MonoBehaviour
     public float playerHealth;
     public bool playerAlive;
     public bool isTakingDamage;
+    private Animator animator;
+
+    public PlayerDeathScreen playerDeathScreen;
     
     // Start is called before the first frame update
     void Start()
@@ -17,6 +20,7 @@ public class PlayerHealthManager : MonoBehaviour
         playerHealth = 100;
         healthBar.SetMaxHealth((int)maxHealth);
         playerAlive = true;
+        animator = GetComponent<Animator>();
 
     }
 
@@ -27,7 +31,9 @@ public class PlayerHealthManager : MonoBehaviour
             Debug.Log("Player is Dead");
             playerHealth = 1;
             playerAlive = false;
+            animator.SetBool("isDead",true);
             StartCoroutine(PlayerDeathTimer());
+            playerDeathScreen.Setup();
 
         }
 

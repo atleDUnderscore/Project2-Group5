@@ -275,6 +275,8 @@ MonoBehaviour:
   enemyType: {fileID: 3924529846797016934, guid: 776bf3acf0b58be4fbe14aedf79e1418, type: 3}
   enemy1Pos: {fileID: 0}
   enemy2Pos: {fileID: 0}
+  spiderSpawn: {fileID: 0}
+  spiderProjSound: {fileID: 0}
 --- !u!114 &6153974644780707243
 MonoBehaviour:
   m_ObjectHideFlags: 0

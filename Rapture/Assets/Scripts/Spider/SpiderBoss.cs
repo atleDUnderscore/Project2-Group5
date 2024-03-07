@@ -34,6 +34,11 @@ public class SpiderBoss : MonoBehaviour
     public Transform enemy2Pos;
     private float gizmoRadius = 2.0f;
 
+    //Audio
+    private AudioSource audio;
+    public AudioClip spiderSpawn;
+    public AudioClip spiderProjSound;
+
 
 
 
@@ -48,6 +53,13 @@ public class SpiderBoss : MonoBehaviour
         //Get self stuff
         animator = GetComponent<Animator>();
         selfRb = GetComponent<Rigidbody2D>();   
+        audio = GetComponent<AudioSource>();
+        jumptoPos = GameObject.FindWithTag("SpiderRoof");
+        floorPos = GameObject.FindWithTag("SpiderFloor");
+        enemy1Pos = GameObject.FindWithTag("SpiderLeft");
+        enemy2Pos = GameObject.FindWithTag("SpiderRight");
+
+        attackTimer = 14;
     }
 
     // Update is called once per frame
@@ -92,7 +104,7 @@ public class SpiderBoss : MonoBehaviour
             JumpToGround();
         }
 
-        if(attackTimer > 5)
+        if(attackTimer > 18)
         {
             FireProjectiles();
             attackTimer = 0;
@@ -102,16 +114,22 @@ public class SpiderBoss : MonoBehaviour
 private IEnumerator Rapidfire()
     {
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
+        audio.PlayOneShot(spiderProjSound);
         yield return new WaitForSeconds(3f);
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
+        audio.PlayOneShot(spiderProjSound);
         yield return new WaitForSeconds(3f);
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
+        audio.PlayOneShot(spiderProjSound);
         yield return new WaitForSeconds(3f);
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
+        audio.PlayOneShot(spiderProjSound);
         yield return new WaitForSeconds(3f);
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
+        audio.PlayOneShot(spiderProjSound);
         yield return new WaitForSeconds(3f);
         Instantiate(projectileType, projectilePos.position, Quaternion.identity);
+        audio.PlayOneShot(spiderProjSound);
         yield return new WaitForSeconds(3f);
     }
 
@@ -131,6 +149,7 @@ private IEnumerator Rapidfire()
         selfRb.gravityScale = -1;
         transform.position = Vector2.MoveTowards(this.transform.position, jumptoPos.transform.position, speed * Time.deltaTime);
         transform.localScale = new Vector3(1,-1,1);
+        audio.PlayOneShot(spiderSpawn);
         Instantiate(enemyType, enemy1Pos.position, Quaternion.identity);
         Instantiate(enemyType, enemy2Pos.position, Quaternion.identity);
     }

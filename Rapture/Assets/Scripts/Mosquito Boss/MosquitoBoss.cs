@@ -37,6 +37,7 @@ public class MosquitoBoss : MonoBehaviour
     private AudioSource mosBossAudio;
     public AudioClip fireProjSound;
     public AudioClip changePosSound;
+    public AudioClip chargeSound;
     public AudioClip chargeWarningSound;
     
 
@@ -52,6 +53,13 @@ public class MosquitoBoss : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         mosBossAudio = GetComponent<AudioSource>();
+        boss2Activator = GameObject.Find("Activator");
+        pointA = GameObject.FindWithTag("MB_PointA");
+        pointB = GameObject.FindWithTag("MB_PointB");
+        pointC = GameObject.FindWithTag("MB_PointC");
+        pointD = GameObject.FindWithTag("MB_PointD");
+        pointE = GameObject.FindWithTag("MB_PointE");
+        pointF = GameObject.FindWithTag("MB_PointF");
 
         //Lets go
         currentPoint = boss2Activator.transform;
@@ -126,6 +134,7 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 8;   
             transform.position = Vector2.MoveTowards(this.transform.position, pointB.transform.position, speed * Time.deltaTime);
+            mosBossAudio.PlayOneShot("S_BuzzLong");
         }
     }
     private void PointB()
@@ -135,6 +144,7 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 8;
             transform.position = Vector2.MoveTowards(this.transform.position, pointC.transform.position, speed * Time.deltaTime);
+            mosBossAudio.PlayOneShot("S_BuzzLong");
         }
     }
     private void PointC()
@@ -144,6 +154,8 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 30;
             transform.position = Vector2.MoveTowards(this.transform.position, pointD.transform.position, speed * Time.deltaTime);
+            mosBossAudio.PlayOneShot("S_MosWarning");
+            mosBossAudio.PlayOneShot("S_MosDash");
         }
     }
     private void PointD()

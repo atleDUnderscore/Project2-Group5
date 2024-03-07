@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7893800402203491990}
   m_Layer: 0
   m_Name: Enemy2Pos
-  m_TagString: Untagged
+  m_TagString: SpiderRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 961339798412758621}
   m_Layer: 6
   m_Name: FloorPos
-  m_TagString: Untagged
+  m_TagString: SpiderFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 8559228241170333397}
   m_Layer: 6
   m_Name: JumpToPos
-  m_TagString: Untagged
+  m_TagString: SpiderRoof
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 1477403578671307281}
   m_Layer: 0
   m_Name: Enemy1Pos
-  m_TagString: Untagged
+  m_TagString: SpiderLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

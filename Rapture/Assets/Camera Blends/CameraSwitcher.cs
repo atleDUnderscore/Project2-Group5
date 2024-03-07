@@ -6,7 +6,7 @@ public class CameraSwitcher : MonoBehaviour
 {
 
     public Animator animator;
-    public Level1MusicManager musicManager;
+    public MusicManager musicManager;
     [SerializeField] private Transform bossLoc;
     [SerializeField] private GameObject boss;
     

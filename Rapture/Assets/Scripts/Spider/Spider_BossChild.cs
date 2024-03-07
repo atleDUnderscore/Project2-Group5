@@ -29,7 +29,7 @@ public class Spider_BossChild : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         playerRb = player.GetComponent<Rigidbody2D>();
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBar>();
-        speed = 5;
+        speed = 3;
         chaseTimer = 2;
     }
 
@@ -58,7 +58,7 @@ public class Spider_BossChild : MonoBehaviour
 
     private void ChasePlayer()
     {
-        speed = 5;
+        speed = 3;
         animator.SetBool("isPatrol", true);
         transform.position = Vector2.MoveTowards(this.transform.position, new Vector2(player.transform.position.x, transform.position.y), speed * Time.deltaTime);     
     }
