@@ -17,6 +17,26 @@ public class SceneManaging : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Alpha1))
+        {
+            SceneManager.LoadScene("Level1");
+        }
+        if (Input.GetKeyUp(KeyCode.Alpha2))
+        {
+            SceneManager.LoadScene("Level2");
+        }
+        if (Input.GetKeyUp(KeyCode.Alpha3))
+        {
+            SceneManager.LoadScene("Level3");
+        }
+        if (Input.GetKeyUp(KeyCode.Alpha0))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+    }
+
     public void ToCredits()
     {
         SceneManager.LoadScene("Credits");
