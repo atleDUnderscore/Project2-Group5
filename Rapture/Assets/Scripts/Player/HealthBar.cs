@@ -28,7 +28,7 @@ public class HealthBar : MonoBehaviour
      * R is Health + 20
      */
     public void Update()
-    {
+    {/*
         if(Input.GetKeyDown(KeyCode.Tab))
         {
             SetHealth((int)healthSlider.value - 20);
@@ -43,6 +43,6 @@ public class HealthBar : MonoBehaviour
         {
             SetHealth((int)healthSlider.value + 20);
             Debug.Log("20 Health Restored");
-        }
+        }*/
     }
 }
