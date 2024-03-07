@@ -56,8 +56,8 @@ public class SpiderBoss : MonoBehaviour
         audio = GetComponent<AudioSource>();
         jumptoPos = GameObject.FindWithTag("SpiderRoof");
         floorPos = GameObject.FindWithTag("SpiderFloor");
-        enemy1Pos = GameObject.FindWithTag("SpiderLeft");
-        enemy2Pos = GameObject.FindWithTag("SpiderRight");
+        enemy1Pos = GameObject.FindWithTag("SpiderLeft").transform;
+        enemy2Pos = GameObject.FindWithTag("SpiderRight").transform;
 
         attackTimer = 14;
     }

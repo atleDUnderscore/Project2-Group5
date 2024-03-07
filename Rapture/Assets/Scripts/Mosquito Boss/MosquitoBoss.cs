@@ -89,7 +89,7 @@ public class MosquitoBoss : MonoBehaviour
         //Check boss' current active point
         CheckBossPos();   
 
-        if(attackTimer > 3 && speed == 0 && currentPoint != pointA.transform)
+        if(attackTimer > 5 && speed == 0 && currentPoint != pointA.transform)
         {
             FireProjectile();
             attackTimer = 0;
@@ -134,7 +134,7 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 8;   
             transform.position = Vector2.MoveTowards(this.transform.position, pointB.transform.position, speed * Time.deltaTime);
-            mosBossAudio.PlayOneShot("S_BuzzLong");
+            mosBossAudio.PlayOneShot(changePosSound);
         }
     }
     private void PointB()
@@ -144,7 +144,7 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 8;
             transform.position = Vector2.MoveTowards(this.transform.position, pointC.transform.position, speed * Time.deltaTime);
-            mosBossAudio.PlayOneShot("S_BuzzLong");
+            mosBossAudio.PlayOneShot(changePosSound);
         }
     }
     private void PointC()
@@ -154,8 +154,8 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 30;
             transform.position = Vector2.MoveTowards(this.transform.position, pointD.transform.position, speed * Time.deltaTime);
-            mosBossAudio.PlayOneShot("S_MosWarning");
-            mosBossAudio.PlayOneShot("S_MosDash");
+            mosBossAudio.PlayOneShot(chargeWarningSound);
+            mosBossAudio.PlayOneShot(chargeSound);
         }
     }
     private void PointD()
@@ -165,6 +165,7 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 8;
             transform.position = Vector2.MoveTowards(this.transform.position, pointE.transform.position, speed * Time.deltaTime);
+            mosBossAudio.PlayOneShot(changePosSound);
         }
     }
     private void PointE()
@@ -174,6 +175,7 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 8;
             transform.position = Vector2.MoveTowards(this.transform.position, pointF.transform.position, speed * Time.deltaTime);
+            mosBossAudio.PlayOneShot(changePosSound);
         }
 
     }
@@ -181,6 +183,7 @@ public class MosquitoBoss : MonoBehaviour
     {
         movementTimer = 0;
         transform.position = Vector2.MoveTowards(this.transform.position, pointA.transform.position, speed * Time.deltaTime);
+        mosBossAudio.PlayOneShot(changePosSound);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
