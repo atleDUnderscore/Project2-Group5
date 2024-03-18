@@ -16,9 +16,11 @@ public class PlayerCombat : MonoBehaviour
     float nextAttackTime = 0f;
     [SerializeField] GameObject projectileType;
     [SerializeField] GameObject projectilePos;
+    public bool isGrounded;
+
 
     
-    public Animator animator;
+    private Animator animator;
 
     public AudioClip attackSwing;
     public AudioClip attackHit;
@@ -31,14 +33,17 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] Image soulCTwo;
     [SerializeField] Image soulCThree;
     [SerializeField] HealthBar healthBar;
+
     
 
 
 
     void Start()
     {
+        isGrounded = GetComponent<PlayerMovement>().IsGrounded();
         playerAudio = GetComponent<AudioSource>();
         soulCount = 0;
+        animator = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
@@ -46,18 +51,22 @@ public class PlayerCombat : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.L) && soulCount > 0)
         {
             soulCount--;
-            Debug.Log(soulCount);
+            animator.SetTrigger("RangedAttack");
         }
         if (Input.GetKeyDown(KeyCode.F) && soulCount > 0)
         {
+            animator.SetTrigger("Heal");
             soulCount--;
             this.GetComponent<PlayerHealthManager>().playerHealth += 30;
             healthBar.SetHealth((int)this.GetComponent<PlayerHealthManager>().playerHealth);
         }
+
+        //Health Cheat
         if(Input.GetKeyDown(KeyCode.M))
         {
             this.GetComponent<PlayerHealthManager>().playerHealth = 100000;
         }
+        
         SoulCounter();
     }
 
@@ -67,9 +76,18 @@ public class PlayerCombat : MonoBehaviour
         // Get Keycode performance
         if (context.performed && Time.time >= nextAttackTime)
         {
+
         // Attack animation
-        animator.SetTrigger("Attack");
-        playerAudio.PlayOneShot(attackSwing);
+            if(!isGrounded)
+            {
+                animator.SetTrigger("AirAttack");
+                playerAudio.PlayOneShot(attackSwing);
+            }
+            else
+            {
+                animator.SetTrigger("Attack");
+                playerAudio.PlayOneShot(attackSwing);
+            }
 
         // Detects Enemies in range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, radius, enemyLayers);
@@ -110,10 +128,9 @@ public class PlayerCombat : MonoBehaviour
     {
         if(col.tag == "Soul")
         {
-            Debug.Log("Soul Hit");
+            //Debug.Log("Soul Hit");
             Destroy(col.gameObject);
             soulCount++;
-            Debug.Log(soulCount);
         }
     }
 
@@ -125,7 +142,6 @@ public class PlayerCombat : MonoBehaviour
             soulCTwo.enabled = true;
             soulCThree.enabled = true;
             soulCount = 3;
-            Debug.Log(soulCount);
         }
         else if (soulCount == 2)
         {
@@ -148,7 +164,6 @@ public class PlayerCombat : MonoBehaviour
         else if(soulCount < 0)
         {
             soulCount = 0;
-            Debug.Log(soulCount);
         }
     }
 
@@ -165,6 +180,6 @@ public class PlayerCombat : MonoBehaviour
         {
             playerProjRb.velocity = new Vector2(-10, 0);
         }
-        Debug.Log("Fired");
+        //Debug.Log("Fired");
     }
 }

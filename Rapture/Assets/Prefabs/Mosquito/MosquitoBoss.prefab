@@ -616,9 +616,9 @@ MonoBehaviour:
   speed: 0
   projectilePos: {fileID: 3298372038308860586}
   projectileType: {fileID: 3281146342877969111, guid: 00dd5537ab337a74b9c05f8925eeee4f, type: 3}
-  fireProjSound: {fileID: 8300000, guid: 256fe47d7e5d1a34d88ba4c024016e22, type: 3}
+  fireProjSound: {fileID: 8300000, guid: 3b4718981fb7dd847a5022a07ebacacb, type: 3}
   changePosSound: {fileID: 8300000, guid: db1996fac3369be4d8cbf99b5c5246d9, type: 3}
-  chargeSound: {fileID: 0}
+  chargeSound: {fileID: 8300000, guid: 1e5d9912d08a72f48b4f26435d99fa54, type: 3}
   chargeWarningSound: {fileID: 8300000, guid: cc4cf10a98acf2e46841e164bfc89be2, type: 3}
 --- !u!70 &956065530940520577
 CapsuleCollider2D:

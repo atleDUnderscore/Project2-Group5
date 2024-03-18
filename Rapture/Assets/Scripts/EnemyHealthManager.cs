@@ -11,13 +11,21 @@ public class EnemyHealthManager : MonoBehaviour
     [SerializeField] Slider enemyHBar;
     [SerializeField] private DamageFlash damageFlash;
     [SerializeField] GameObject soulObject;
+    private Animator animator;
+    private AudioSource audioSource;
+    public AudioClip deathSound;
+    private Collider2D collider2D;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         enemyHBar.maxValue = maxHealth;
         enemyHBar.value = currentHealth;
+        collider2D = GetComponent<Collider2D>();
     }
 
 
@@ -36,13 +44,18 @@ public class EnemyHealthManager : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy Died");
+
         // Die Animation
+        animator.SetTrigger("isDead");
 
-        //GetComponent<Collider2D>().enabled = false;
-        //this.enabled = false;
-        Instantiate(soulObject, gameObject.transform.position, Quaternion.identity);
+        //Disable Collider
+        collider2D.enabled = false;
+        //Spawn Soul
+        Instantiate(soulObject, gameObject.transform.position, Quaternion.identity);       
+    }
 
+    void DestroySelf()
+    {
         Destroy(gameObject);
-       
     }
 }

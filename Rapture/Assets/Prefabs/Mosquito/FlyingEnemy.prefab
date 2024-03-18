@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 3274996860529725460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.38283, y: -5.88, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -158,6 +158,7 @@ MonoBehaviour:
   enemyHBar: {fileID: 4207539128147397494}
   damageFlash: {fileID: 6166791829119508690}
   soulObject: {fileID: 4376849641955989563, guid: e89658075b12a63469d4ed517375979f, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &4293649958306626180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,8 +300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aead7f33c1062794482761c5ff3e0376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: {fileID: 0}
-  player: {fileID: 6543246470120009041, guid: ded4ac74ce5d47a4cb8499af312df214, type: 3}
   speed: 4
   distanceBetween: 15
 --- !u!82 &-4243819481735097416
@@ -442,6 +441,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyHealthBars (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8608066195925835333, guid: 70b8aee611cac6e49acd8edb5db0c47a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00000095367
+      objectReference: {fileID: 0}
+    - target: {fileID: 8608066195925835333, guid: 70b8aee611cac6e49acd8edb5db0c47a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.2
+      objectReference: {fileID: 0}
     - target: {fileID: 9027332912262963913, guid: 70b8aee611cac6e49acd8edb5db0c47a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -468,11 +475,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9027332912262963913, guid: 70b8aee611cac6e49acd8edb5db0c47a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 27.7724
       objectReference: {fileID: 0}
     - target: {fileID: 9027332912262963913, guid: 70b8aee611cac6e49acd8edb5db0c47a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 16.9163
       objectReference: {fileID: 0}
     - target: {fileID: 9027332912262963913, guid: 70b8aee611cac6e49acd8edb5db0c47a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -504,11 +511,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9027332912262963913, guid: 70b8aee611cac6e49acd8edb5db0c47a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.39
+      value: 0.1218
       objectReference: {fileID: 0}
     - target: {fileID: 9027332912262963913, guid: 70b8aee611cac6e49acd8edb5db0c47a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 5.32
+      value: 0.2448
       objectReference: {fileID: 0}
     - target: {fileID: 9027332912262963913, guid: 70b8aee611cac6e49acd8edb5db0c47a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

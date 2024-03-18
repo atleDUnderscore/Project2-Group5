@@ -13,6 +13,7 @@ public class MosquitoBoss : MonoBehaviour
     //Self References
     private Animator animator;
     private Rigidbody2D rb;
+    private GameObject bossHealthBar;
 
     //Movement References
     public GameObject boss2Activator;
@@ -39,6 +40,7 @@ public class MosquitoBoss : MonoBehaviour
     public AudioClip changePosSound;
     public AudioClip chargeSound;
     public AudioClip chargeWarningSound;
+    private bool soundPlaying = false;
     
 
     // Start is called before the first frame update
@@ -60,6 +62,7 @@ public class MosquitoBoss : MonoBehaviour
         pointD = GameObject.FindWithTag("MB_PointD");
         pointE = GameObject.FindWithTag("MB_PointE");
         pointF = GameObject.FindWithTag("MB_PointF");
+        bossHealthBar = GameObject.Find("BossHealth");
 
         //Lets go
         currentPoint = boss2Activator.transform;
@@ -76,10 +79,12 @@ public class MosquitoBoss : MonoBehaviour
         if(transform.position.x > player.transform.position.x)
                 {
                     transform.localScale = new Vector3(1,1,1);
+                    bossHealthBar.transform.localScale = new Vector3(-0.09166357f,0.1551155f,0.1551155f);
                 }
                 else
                 {
                     transform.localScale = new Vector3(-1,1,1);
+                    bossHealthBar.transform.localScale = new Vector3(0.09166357f,0.1551155f,0.1551155f);
                 } 
 
         //Set up timers        
@@ -94,6 +99,12 @@ public class MosquitoBoss : MonoBehaviour
             FireProjectile();
             attackTimer = 0;
         }     
+    }
+
+    private IEnumerator AudioDelay()
+    {
+        yield return new WaitForSeconds(2);
+        soundPlaying = false;
     }
 
     private void CheckBossPos()
@@ -134,7 +145,12 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 8;   
             transform.position = Vector2.MoveTowards(this.transform.position, pointB.transform.position, speed * Time.deltaTime);
-            mosBossAudio.PlayOneShot(changePosSound);
+            if(!soundPlaying)
+            {
+                mosBossAudio.PlayOneShot(changePosSound, 0.7f);
+                soundPlaying = true;
+                StartCoroutine(AudioDelay());
+            }
         }
     }
     private void PointB()
@@ -144,7 +160,12 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 8;
             transform.position = Vector2.MoveTowards(this.transform.position, pointC.transform.position, speed * Time.deltaTime);
-            mosBossAudio.PlayOneShot(changePosSound);
+            if(!soundPlaying)
+            {
+                mosBossAudio.PlayOneShot(changePosSound, 0.7f);
+                soundPlaying = true;
+                StartCoroutine(AudioDelay());
+            }
         }
     }
     private void PointC()
@@ -154,8 +175,13 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 30;
             transform.position = Vector2.MoveTowards(this.transform.position, pointD.transform.position, speed * Time.deltaTime);
-            mosBossAudio.PlayOneShot(chargeWarningSound);
-            mosBossAudio.PlayOneShot(chargeSound);
+            if(!soundPlaying)
+            {
+                mosBossAudio.PlayOneShot(chargeWarningSound);
+                mosBossAudio.PlayOneShot(chargeSound);
+                soundPlaying = true;
+                StartCoroutine(AudioDelay());
+            }
         }
     }
     private void PointD()
@@ -165,7 +191,12 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 8;
             transform.position = Vector2.MoveTowards(this.transform.position, pointE.transform.position, speed * Time.deltaTime);
-            mosBossAudio.PlayOneShot(changePosSound);
+            if(!soundPlaying)
+            {
+                mosBossAudio.PlayOneShot(changePosSound, 0.7f);
+                soundPlaying = true;
+                StartCoroutine(AudioDelay());
+            }
         }
     }
     private void PointE()
@@ -175,7 +206,12 @@ public class MosquitoBoss : MonoBehaviour
         {
             speed = 8;
             transform.position = Vector2.MoveTowards(this.transform.position, pointF.transform.position, speed * Time.deltaTime);
-            mosBossAudio.PlayOneShot(changePosSound);
+            if(!soundPlaying)
+            {
+                mosBossAudio.PlayOneShot(changePosSound, 0.7f);
+                soundPlaying = true;
+                StartCoroutine(AudioDelay());
+            }
         }
 
     }
@@ -183,7 +219,12 @@ public class MosquitoBoss : MonoBehaviour
     {
         movementTimer = 0;
         transform.position = Vector2.MoveTowards(this.transform.position, pointA.transform.position, speed * Time.deltaTime);
-        mosBossAudio.PlayOneShot(changePosSound);
+        if(!soundPlaying)
+            {
+                mosBossAudio.PlayOneShot(changePosSound, 0.7f);
+                soundPlaying = true;
+                StartCoroutine(AudioDelay());
+            }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

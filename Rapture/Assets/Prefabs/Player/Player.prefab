@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1489566153935267152}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.38, y: -0.04, z: 0}
+  m_LocalPosition: {x: -1.45, y: -0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 5585540197563094739}
-  radius: 0.7
+  radius: 2
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -462,6 +462,7 @@ MonoBehaviour:
   soulCOne: {fileID: 0}
   soulCTwo: {fileID: 0}
   soulCThree: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!114 &6542580543944938607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,6 +481,7 @@ MonoBehaviour:
   playerHealth: 0
   playerAlive: 0
   isTakingDamage: 0
+  playerDeathScreen: {fileID: 0}
 --- !u!82 &996517249301928357
 AudioSource:
   m_ObjectHideFlags: 0

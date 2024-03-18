@@ -52,23 +52,38 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+
+        if(IsGrounded())
+        {
+            animator.SetBool("isFalling", false);
+        }
+
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
         if(context.performed && IsGrounded())
         {
+            //animator.SetBool("isFalling", false);
+            animator.SetBool("isJumping", true);
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
         }
 
         if(context.canceled && rb.velocity.y > 0f)
         {
+            animator.SetBool("isFalling", true);
+            animator.SetBool("isJumping",false);
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
+
     }
 
-    private bool IsGrounded()
-    {
+    public bool IsGrounded()
+    {       
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
