@@ -2542,6 +2542,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &90913472
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.108433
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.854746
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.9475232
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335954301670664638, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335954301670664638, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781492516894588279, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_Name
+      value: Slime Enemy (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
 --- !u!1 &96995902
 GameObject:
   m_ObjectHideFlags: 0
@@ -3089,6 +3154,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2cc7fd1ddc7b4744bf0af4ab90a2cfc, type: 3}
+--- !u!1001 &410928612
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 65.080185
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.4349995
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.9475232
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335954301670664638, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335954301670664638, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781492516894588279, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_Name
+      value: Slime Enemy (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
 --- !u!1 &451131570
 GameObject:
   m_ObjectHideFlags: 0
@@ -3560,6 +3690,71 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1175159173}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!1001 &642278385
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.54135895
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.539993
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.9475232
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335954301670664638, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335954301670664638, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781492516894588279, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_Name
+      value: Slime Enemy (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
 --- !u!1 &674595778
 GameObject:
   m_ObjectHideFlags: 0
@@ -7566,6 +7761,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1197472865
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -34.97993
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.539993
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.9475232
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203844717176242222, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335954301670664638, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335954301670664638, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781492516894588279, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
+      propertyPath: m_Name
+      value: Slime Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c28ee5cb80ebd644eb0cf6b1251b7524, type: 3}
 --- !u!1 &1282706524
 GameObject:
   m_ObjectHideFlags: 0
@@ -9801,3 +10061,7 @@ SceneRoots:
   - {fileID: 906419808}
   - {fileID: 131760255}
   - {fileID: 52709180}
+  - {fileID: 1197472865}
+  - {fileID: 642278385}
+  - {fileID: 410928612}
+  - {fileID: 90913472}
