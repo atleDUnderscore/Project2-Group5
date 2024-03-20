@@ -9,7 +9,7 @@ public class SceneManaging : MonoBehaviour
     {
         if (col.tag == "Player" && SceneManager.GetActiveScene().name == "Level1")
         {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Level2intro");
         }
         if (col.tag == "Player" && SceneManager.GetActiveScene().name == "Level2")
         {
@@ -21,11 +21,11 @@ public class SceneManaging : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Level1intro");
         }
         if (Input.GetKeyUp(KeyCode.Alpha2))
         {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Level2intro");
         }
         if (Input.GetKeyUp(KeyCode.Alpha3))
         {
@@ -54,10 +54,15 @@ public class SceneManaging : MonoBehaviour
 
     public void ToPlay()
     {
+        SceneManager.LoadScene("Level1intro");
+    }
+
+     public void ToPlayLevel1()
+    {
         SceneManager.LoadScene("Level1");
     }
 
-     public void ToPlay2()
+     public void ToPlayLevel2()
     {
         SceneManager.LoadScene("Level2");
     }

@@ -2639,7 +2639,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2037393150}
         m_TargetAssemblyTypeName: SceneManaging, Assembly-CSharp
-        m_MethodName: ToPlay
+        m_MethodName: ToPlayLevel1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
