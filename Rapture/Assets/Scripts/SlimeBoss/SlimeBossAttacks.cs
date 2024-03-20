@@ -21,7 +21,7 @@ public class SlimeBossAttacks : MonoBehaviour
     public float KickbackForce;
 
     public Transform eruptPointA;
-    public Transform eruptPointB;
+    //public Transform eruptPointB;
     public Transform eruptPointC;
     public Transform meleePos;
     public LayerMask playerLayer;
@@ -118,7 +118,7 @@ public class SlimeBossAttacks : MonoBehaviour
     void EruptProjectiles()
     {
         Instantiate(projectile2Type, eruptPointA.position, Quaternion.identity);
-        Instantiate(projectile2Type, eruptPointB.position, Quaternion.identity);
+        //Instantiate(projectile2Type, eruptPointB.position, Quaternion.identity);
         Instantiate(projectile2Type, eruptPointC.position, Quaternion.identity);
     }
 
@@ -137,7 +137,7 @@ public class SlimeBossAttacks : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(eruptPointA.transform.position, radius);
-        Gizmos.DrawWireSphere(eruptPointB.transform.position, radius);
+        //Gizmos.DrawWireSphere(eruptPointB.transform.position, radius);
         Gizmos.DrawWireSphere(eruptPointC.transform.position, radius);
         Gizmos.DrawWireSphere(projectilePos.transform.position, radius);
         Gizmos.DrawWireSphere(meleePos.transform.position, meleeRadius);
