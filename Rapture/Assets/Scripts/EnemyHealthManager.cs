@@ -44,6 +44,8 @@ public class EnemyHealthManager : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy Died");
+        //Play Death Sound
+        audioSource.PlayOneShot(deathSound);
 
         // Die Animation
         animator.SetTrigger("isDead");
