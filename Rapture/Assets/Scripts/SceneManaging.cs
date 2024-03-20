@@ -57,6 +57,11 @@ public class SceneManaging : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
+     public void ToPlay2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
     public void ToSettings()
     {
         SceneManager.LoadScene("Settings");
