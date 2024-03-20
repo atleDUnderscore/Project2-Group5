@@ -115,7 +115,6 @@ Transform:
   m_Children:
   - {fileID: 8030352402735368261}
   - {fileID: 430550061185464302}
-  - {fileID: 294511076502340392}
   - {fileID: 1305998812688996392}
   - {fileID: 8084048852328669231}
   - {fileID: 5386818099931133674}
@@ -221,7 +220,7 @@ MonoBehaviour:
   meleeDamage: 20
   KickbackForce: 10
   eruptPointA: {fileID: 430550061185464302}
-  eruptPointB: {fileID: 294511076502340392}
+  eruptPointB: {fileID: 0}
   eruptPointC: {fileID: 1305998812688996392}
   meleePos: {fileID: 5386818099931133674}
   playerLayer:
@@ -253,6 +252,7 @@ MonoBehaviour:
   enemyHBar: {fileID: 6711124582896173047}
   damageFlash: {fileID: -5448339032067279966}
   soulObject: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &-5448339032067279966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -795,37 +795,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.7099893, y: -2.44, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6992251296099929668}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7467204256363262304
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 294511076502340392}
-  m_Layer: 0
-  m_Name: EruptPointB
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &294511076502340392
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7467204256363262304}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7199893, y: -0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
