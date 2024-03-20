@@ -403,7 +403,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6962817, y: 0.6316979, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1946413386735968692}
@@ -558,6 +558,7 @@ MonoBehaviour:
   enemyHBar: {fileID: 2251400919038960683}
   damageFlash: {fileID: 6056429378626957670}
   soulObject: {fileID: 4376849641955989563, guid: e89658075b12a63469d4ed517375979f, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &4898091311274451592
 MonoBehaviour:
   m_ObjectHideFlags: 0

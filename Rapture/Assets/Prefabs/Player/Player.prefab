@@ -375,7 +375,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   isFacingRight: 1
-  playerAlive: 0
+  playerAlive: 1
   playerIsWebbed: 0
   animator: {fileID: 1817497305954082889}
 --- !u!70 &5304517040464084516
@@ -387,7 +387,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 6543246470120009041}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3facbecd06a361e42b929f664ee8cb5a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -455,7 +455,7 @@ MonoBehaviour:
   attackRate: 2
   projectileType: {fileID: 127950442828353075, guid: 431fb2407a0cc9a46816d1739ad13b19, type: 3}
   projectilePos: {fileID: 1489566153935267152}
-  animator: {fileID: 1817497305954082889}
+  isGrounded: 0
   attackSwing: {fileID: 8300000, guid: bff559fd9b86c53498347b861b7b4110, type: 3}
   attackHit: {fileID: 8300000, guid: 576be312c04138c41a2f8a026c8cab4b, type: 3}
   soulAttack: {fileID: 0}
@@ -479,7 +479,7 @@ MonoBehaviour:
   playerSpawn: {fileID: 0}
   maxHealth: 100
   playerHealth: 0
-  playerAlive: 0
+  playerAlive: 1
   isTakingDamage: 0
   playerDeathScreen: {fileID: 0}
 --- !u!82 &996517249301928357
@@ -502,7 +502,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.0254288
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
