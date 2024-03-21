@@ -32,7 +32,7 @@ public class PlayerHealthManager : MonoBehaviour
             playerHealth = 1;
             playerAlive = false;
             animator.SetBool("isDead",true);
-            StartCoroutine(PlayerDeathTimer());
+            //StartCoroutine(PlayerDeathTimer());
             playerDeathScreen.Setup();
 
         }
@@ -63,13 +63,13 @@ public class PlayerHealthManager : MonoBehaviour
         }
     }
 
-    IEnumerator PlayerDeathTimer()
+    /*IEnumerator PlayerDeathTimer()
     {
         yield return new WaitForSeconds(2.5f);
         this.gameObject.transform.position = playerSpawn.transform.position;
         playerHealth = maxHealth;
         playerAlive = true;
         healthBar.SetMaxHealth((int)maxHealth);
-    }
+    }*/
 
 }
