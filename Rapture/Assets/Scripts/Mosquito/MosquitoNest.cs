@@ -8,12 +8,13 @@ public class MosquitoNest : MonoBehaviour
     public Transform spawnPos;
     private float spawnCount;
     private float spawnTimer;
+    private GameObject player;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -21,7 +22,10 @@ public class MosquitoNest : MonoBehaviour
     {
         spawnTimer += Time.deltaTime;
 
-        if(spawnTimer > 8)
+
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+
+        if(distance >= 30 && spawnTimer >= 8)
         {
             SpawnEnemy();
             spawnTimer = 0;

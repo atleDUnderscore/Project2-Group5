@@ -220,7 +220,6 @@ MonoBehaviour:
   meleeDamage: 20
   KickbackForce: 10
   eruptPointA: {fileID: 430550061185464302}
-  eruptPointB: {fileID: 0}
   eruptPointC: {fileID: 1305998812688996392}
   meleePos: {fileID: 5386818099931133674}
   playerLayer:
@@ -252,7 +251,7 @@ MonoBehaviour:
   enemyHBar: {fileID: 6711124582896173047}
   damageFlash: {fileID: -5448339032067279966}
   soulObject: {fileID: 0}
-  deathSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 3f8547e8419c2454ea56cf67c907a1c5, type: 3}
 --- !u!114 &-5448339032067279966
 MonoBehaviour:
   m_ObjectHideFlags: 0
