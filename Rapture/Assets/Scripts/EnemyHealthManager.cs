@@ -52,6 +52,7 @@ public class EnemyHealthManager : MonoBehaviour
 
         //Disable Collider
         collider2D.enabled = false;
+        StartCoroutine(AutoDestroy());
         //Spawn Soul
         Instantiate(soulObject, gameObject.transform.position, Quaternion.identity);       
     }
@@ -59,5 +60,14 @@ public class EnemyHealthManager : MonoBehaviour
     void DestroySelf()
     {
         Destroy(gameObject);
+    }
+
+    IEnumerator AutoDestroy()
+    {
+        yield return new WaitForSeconds(.7f);
+        if (gameObject)
+        {
+            Destroy(gameObject);    
+        }
     }
 }

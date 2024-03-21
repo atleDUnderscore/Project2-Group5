@@ -292,7 +292,8 @@ MonoBehaviour:
   maxHealth: 1600
   enemyHBar: {fileID: 8736437317862637442}
   damageFlash: {fileID: 8839005147388348882}
-  soulObject: {fileID: 4376849641955989563, guid: e89658075b12a63469d4ed517375979f, type: 3}
+  soulObject: {fileID: 7164116428828457121, guid: 71e7c4e83bc940d48b7bea252bb3439d, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &5448940505320164432
 MonoBehaviour:
   m_ObjectHideFlags: 0

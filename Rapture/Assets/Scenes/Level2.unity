@@ -2191,7 +2191,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2589440502234826521, guid: 3d13fe89a6ad5f54b86f4298d74737f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -307.4
+      value: -172
       objectReference: {fileID: 0}
     - target: {fileID: 2589440502234826521, guid: 3d13fe89a6ad5f54b86f4298d74737f1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4766,6 +4766,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7159214197602028743, guid: b8e466703c68da04d9e7e2f4c5edb9b3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7545671817851029324, guid: b8e466703c68da04d9e7e2f4c5edb9b3, type: 3}
       propertyPath: m_Name
       value: Nest
@@ -4893,7 +4897,7 @@ Transform:
   m_GameObject: {fileID: 908116136}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.1, y: -2.4017997, z: -10}
+  m_LocalPosition: {x: 68.3, y: -2.4017997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6222,7 +6226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3841883352546187594, guid: ded4ac74ce5d47a4cb8499af312df214, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -68.1
+      value: 67.3
       objectReference: {fileID: 0}
     - target: {fileID: 3841883352546187594, guid: ded4ac74ce5d47a4cb8499af312df214, type: 3}
       propertyPath: m_LocalPosition.y
