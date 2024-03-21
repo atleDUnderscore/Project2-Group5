@@ -25,10 +25,13 @@ public class MosquitoNest : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        if(distance >= 30 && spawnTimer >= 8)
+        if(distance <= 20)
         {
+            if(spawnTimer >= 8)
+            {
             SpawnEnemy();
             spawnTimer = 0;
+            }
         }
     }
 
