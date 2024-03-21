@@ -15,6 +15,7 @@ public class EnemyHealthManager : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip deathSound;
     private Collider2D collider2D;
+    bool isAlive;
 
 
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class EnemyHealthManager : MonoBehaviour
         enemyHBar.maxValue = maxHealth;
         enemyHBar.value = currentHealth;
         collider2D = GetComponent<Collider2D>();
+        isAlive = true;
     }
 
 
@@ -49,15 +51,32 @@ public class EnemyHealthManager : MonoBehaviour
 
         // Die Animation
         animator.SetTrigger("isDead");
+        isAlive = false;
 
         //Disable Collider
         collider2D.enabled = false;
+        if(this.gameObject.GetComponent<CapsuleCollider2D>() != null)
+        {
+            this.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+        }
         //Spawn Soul
-        Instantiate(soulObject, gameObject.transform.position, Quaternion.identity);       
+        Instantiate(soulObject, gameObject.transform.position, Quaternion.identity);
+        StartCoroutine(AutoDestroy());
     }
 
     void DestroySelf()
     {
         Destroy(gameObject);
     }
+
+    IEnumerator AutoDestroy()
+    {
+        yield return new WaitForSeconds(.75f);
+        if(gameObject)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    
 }

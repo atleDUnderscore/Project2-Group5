@@ -7,6 +7,7 @@ public class Spider_BossChild : MonoBehaviour
     private HealthBar healthBar;
     private Rigidbody2D rb;
     [SerializeField] private float speed;
+    private float attackTimer;
     private GameObject player;
     private Rigidbody2D playerRb;
     [SerializeField] private Transform playerTransform;
@@ -37,7 +38,8 @@ public class Spider_BossChild : MonoBehaviour
     void Update()
     {
         chaseTimer += Time.deltaTime;
-        if(chaseTimer > 4)
+        attackTimer += Time.deltaTime;
+        if (chaseTimer > 4)
         {
             ChasePlayer();
         }
@@ -64,17 +66,22 @@ public class Spider_BossChild : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(attackTimer > 2)
         {
-            kickbackForce = 3;
-            other.gameObject.GetComponent<PlayerHealthManager>().playerHealth -= damage;
-            healthBar.SetHealth((int)other.gameObject.GetComponent<PlayerHealthManager>().playerHealth);
-            playerRb.velocity = new Vector2(-kickbackForce, 0);
-            spiderAudio.PlayOneShot(hitSound);
-            playerMovement.playerIsWebbed = false;
-            chaseTimer = 0;
-            //Stop();
+            if (other.gameObject.CompareTag("Player"))
+            {
+                kickbackForce = 3;
+                other.gameObject.GetComponent<PlayerHealthManager>().playerHealth -= damage;
+                healthBar.SetHealth((int)other.gameObject.GetComponent<PlayerHealthManager>().playerHealth);
+                playerRb.velocity = new Vector2(-kickbackForce, 0);
+                spiderAudio.PlayOneShot(hitSound);
+                playerMovement.playerIsWebbed = false;
+                chaseTimer = 0;
+                attackTimer = 0;
+                //Stop();
+            }
         }
+        
     }
     private void Stop()
     {

@@ -10,6 +10,7 @@ public class MummyPatrol : MonoBehaviour
     private Transform currentPoint;
     private float speed;
     private GameObject player;
+    bool isAdvancing;
     [SerializeField] private Transform playerTransform;
 
     // Start is called before the first frame update
@@ -19,6 +20,7 @@ public class MummyPatrol : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         currentPoint = pointA.transform;
         speed = 2;
+        isAdvancing = false;
     }
 
     // Update is called once per frame
@@ -29,17 +31,18 @@ public class MummyPatrol : MonoBehaviour
         if (distance > 12)
         {
             Patrol();
+            isAdvancing = false;
         }
         else
         {
             Advance();
         }
 
-        if (transform.position.x > player.transform.position.x)
+        if (transform.position.x > player.transform.position.x && isAdvancing)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
-        else
+        else if(transform.position.x < player.transform.position.x && isAdvancing)
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
@@ -51,10 +54,12 @@ public class MummyPatrol : MonoBehaviour
         Vector2 point = currentPoint.position - transform.position;
         if (currentPoint == pointB.transform)
         {
+
             rb.velocity = new Vector2(speed, 0);
         }
         else
         {
+
             rb.velocity = new Vector2(-speed, 0);
         }
 
@@ -77,12 +82,14 @@ public class MummyPatrol : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+        Debug.Log("Flipped");
     }
 
     public void Advance()
     {
         speed = 2;
         transform.position = Vector2.MoveTowards(this.transform.position, new Vector2(player.transform.position.x, transform.position.y), speed * Time.deltaTime);
+        isAdvancing = true;
     }
 
     private void OnDrawGizmos()
