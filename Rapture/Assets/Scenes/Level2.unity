@@ -7600,7 +7600,7 @@ GameObject:
   - component: {fileID: 1420102041}
   - component: {fileID: 1420102040}
   - component: {fileID: 1420102039}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: StreetLamp (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9456,7 +9456,7 @@ GameObject:
   - component: {fileID: 1783704608}
   - component: {fileID: 1783704607}
   - component: {fileID: 1783704609}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BoutiqueItems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
