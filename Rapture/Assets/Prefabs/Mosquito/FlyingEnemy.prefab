@@ -158,7 +158,7 @@ MonoBehaviour:
   enemyHBar: {fileID: 4207539128147397494}
   damageFlash: {fileID: 6166791829119508690}
   soulObject: {fileID: 4376849641955989563, guid: e89658075b12a63469d4ed517375979f, type: 3}
-  deathSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 92dc263b0dd45bd478b7138f1d0e05e6, type: 3}
 --- !u!114 &4293649958306626180
 MonoBehaviour:
   m_ObjectHideFlags: 0
