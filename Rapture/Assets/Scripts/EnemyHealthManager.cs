@@ -53,6 +53,10 @@ public class EnemyHealthManager : MonoBehaviour
         //Disable Collider
         collider2D.enabled = false;
         StartCoroutine(AutoDestroy());
+        if(this.gameObject.GetComponent<CapsuleCollider2D>())
+        {
+            this.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+        }
         //Spawn Soul
         Instantiate(soulObject, gameObject.transform.position, Quaternion.identity);       
     }

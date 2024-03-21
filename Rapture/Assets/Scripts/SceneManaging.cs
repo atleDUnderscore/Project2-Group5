@@ -13,7 +13,7 @@ public class SceneManaging : MonoBehaviour
         }
         if (col.tag == "Player" && SceneManager.GetActiveScene().name == "Level2")
         {
-            SceneManager.LoadScene("Level3intro");
+            SceneManager.LoadScene("Level3");
         }
         if (col.tag == "Player" && SceneManager.GetActiveScene().name == "Level3")
         {
