@@ -13,6 +13,10 @@ public class SceneManaging : MonoBehaviour
         }
         if (col.tag == "Player" && SceneManager.GetActiveScene().name == "Level2")
         {
+            SceneManager.LoadScene("Level3intro");
+        }
+        if (col.tag == "Player" && SceneManager.GetActiveScene().name == "Level3")
+        {
             SceneManager.LoadScene("MainMenu");
         }
     }
@@ -29,7 +33,7 @@ public class SceneManaging : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.Alpha3))
         {
-            SceneManager.LoadScene("Level3");
+            SceneManager.LoadScene("Level3intro");
         }
         if (Input.GetKeyUp(KeyCode.Alpha0))
         {
